@@ -40,16 +40,31 @@ public class Main {
          System.out.println(animalsArrayList);
 
         System.out.println("--------------------");
+
         //Here is an object for the task 2.
 
+        ArrayList<ClassForGeneric> someClass = new ArrayList<ClassForGeneric>();
+        // here we add generics, which contain string values.
+        //well, actually an add is a method too.
+        someClass.add(new ClassForGeneric("dfgfdgdf"));
+        someClass.add(new ClassForGeneric("Some words"));
+        someClass.add(new ClassForGeneric(456));
 
-        ArrayList<ClassForGeneric> simpleClass = new ArrayList<ClassForGeneric>();
+        System.out.println(someClass); // Here something did not worked.
 
-        simpleClass.add(new ClassForGeneric(1.2, "yttu"));
-        simpleClass.add(new ClassForGeneric(345L, "hty"));
-        simpleClass.add(new ClassForGeneric(-126, "Some Letters"));
-        simpleClass.add(new ClassForGeneric(0, "retr ghjhg"));
+        ClassForGeneric <String> account = new ClassForGeneric <>("Some letters");
+        ClassForGeneric <Integer> account2 = new ClassForGeneric <>(345);
 
-        System.out.println(simpleClass);
+        //Here is a method which worked:
+        account.fill("1");
+        account2.fill(345);
+        account.fill("Some letters");
+
+
+
+
+
+
+
     }
 }
